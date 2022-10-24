@@ -26,7 +26,8 @@ This dashboard also shows total sales from the top customer cities allowing sale
 Last but not least, I created a Product Overview to give the team insight into the most ordered products and the cities where the most orders were made.
 
 Analysis and Insights
-Sales Overview
+
+1. Sales Overview
 Total sales from 2015 to 2018 were 33.9 billion. In 2016 there was a downward trend in income by 0.04% and the average income trend also decreased. However, these trends were not correlated with each other, as the trend of income started to increase in 2017, while the average variable shows the opposite trend.
 Of the total sales per category, Technology generated the most sales of 12.4 billion. The best-selling product is the Canon ImageCLASS 2200 Advance Copier with total sales of 924 million. However, in 2016 there was a decrease in 2 product categories by 0.07% from technology and 0.09% from office supplies.
 In 2015, SM/20320 and SC/20095 became the 2 best customers with total sales of 354.9 million and 193.1 million, respectively. However, both experienced a significant sales decline of 97% in 2016.

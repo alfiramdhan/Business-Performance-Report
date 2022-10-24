@@ -44,6 +44,7 @@ Staple Envelope, Staples, and Easy-Staple Paper are the products that customers 
 Although included in the most orders, Office Supplies (3665) is not the best product category of total sales. Technology (1518) generated the most sales and this can be attributed to the unit price of the product.
 
 Recommendations
+
 Explore marketing strategies that will help target and bring in new clients.
 The company should utilize customer and product information for marketing strategies that will help in retaining top customers.
 Find out what makes New York, Los Angeles, and Philadelphia their favorite cities for customers and apply the same strategy in other customer cities.

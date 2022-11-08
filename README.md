@@ -5,9 +5,12 @@ As I began this project I took into consideration the cycle of a data analysis p
 
 Reasearch Question
 Through the information has given, I desire to understand :
-Sales performace from 2015 to 2018 by seeing annual revenue, average revenue, best selling product, best selling category and top customer by sales;
-Customer growth from 2015 to 2018 by seeing annual active user, new customer, customer with repeat order, average order by customers, consumer segment and topcity by sales;
-Product overview from 2015 to 2018 by seeing total order by product, total order by category, top product order by city and top category order by city.
+
+1. Sales performace from 2015 to 2018 by seeing sales growth, burn-rate per year, best GMV on every customer’s first transaction, and best city with the largest first order;
+
+2. Customer growth from 2015 to 2018 by seeing annual active user vs new customer, customer with repeat order (retention), best GMV per year and the ages who make order per year;
+
+3. Product overview from 2015 to 2018 by seeing best category by order, best category by sales, category with highest discount value, and best product for first order.
 
 Data Preparation
 After understanding my data sources and data storage formats, I will perform analysis using PostgreSQL and create visualizations using Google Data Studio.
@@ -28,26 +31,41 @@ Last but not least, I created a Product Overview to give the team insight into t
 Analysis and Insights
 
 1. Sales Overview
-Total sales from 2015 to 2018 were 33.9 billion. In 2016 there was a downward trend in income by 0.04% and the average income trend also decreased. However, these trends were not correlated with each other, as the trend of income started to increase in 2017, while the average variable shows the opposite trend.
-Of the total sales per category, Technology generated the most sales of 12.4 billion. The best-selling product is the Canon ImageCLASS 2200 Advance Copier with total sales of 924 million. However, in 2016 there was a decrease in 2 product categories by 0.07% from technology and 0.09% from office supplies.
-In 2015, SM/20320 and SC/20095 became the 2 best customers with total sales of 354.9 million and 193.1 million, respectively. However, both experienced a significant sales decline of 97% in 2016.
+- Total revenue from 2015 to 2018 were 33.9 billion. In 2016 the store experienced negative revenue growth of -4.3% on the contrary sales growth showed an increasing trend with a peak trend in 2017 of 27.1%;
+
+- The best GMV on the first order was SM/20320 by contributing to total revenue of 339,6 million and unfortunately it has a downward trend in the following year;
+
+- Of the promotion value given by the shop, the average burning rate was about 5.8% per year;
+
+- The best cities with the number of consumers placing first orders were dominated by New York with 49 and 14 in 2015 to 2016. It shows the locations of the clients making the most purchases overall allowing the sales team to drive sales and marketing efforts in these areas to retain existing customers and attract new ones;
+
+- The store experienced negative revenue growth and experienced a downward trend in GMV on the first order, it could be an initial diagnosis of the customer not being interested / unsatisfied / disappointed in shopping at the store. The store needs to do a lot of improvement both in terms of product and marketing business.
 
 2. Customer Overview
-Total Customers is 793. Number of Orders is 4912. This shows the probability that most of the customers are repeat customers and new clients are few.
-Based on the table of Active Users vs. New Customers, it can be seen that there is an opposite correlation in the variable growth of active users and new customers every year. The number of active users has increased every year although in 2016 it decreased. On the other hand, the number of new customers decreased drastically in 2016 and continued to decline in the following year.
-There was a strong correlation of 0.9 between the repeat order variable and the average order variable. However a strong correlation does not imply causality. We cannot say that a change in one variable causes a change in another, only that the changes move together. So we need to do more testing to determine if they are statistically significant. Meanwhile, the two variables experienced an increasing trend every year (from 2015 to 2018.
-In consumer segment analysis, the top segment is consumers with 50.8% with total sales of 17.2 billion. Corporate came in second with sales of 10.3 billion from 30.4% and Home Office around 18.8% with sales of 6.4 billion.
-The top 5 customer cities with the highest sales were New York 3.1 billion, Los Angeles 2.1 billion, and Philadelphia 1.9 billion. It shows the locations of the clients making the most purchases overall allowing the sales team to drive sales and marketing efforts in these areas to retain existing customers and attract new ones.
+- Total Customers were 793. Number of transaction (orders) were 4912. This shows the probability that most of the customers were repeat customers and new clients were few;
+
+- Based on the table of Active Users vs. New Customers vs. Retaining Customers, it can be seen that there was an opposite correlation in the variable growth of active users and new customers every year. The number of active users has increased every year as evidenced by the increase in the number of customers who make repeat orders. On the other hand, the number of new customers decreased drastically in 2016 and continued to decline in the following year;
+
+- In 2015, SM/20320 became the best customer by contributing to total revenue of 354.9 million. However, in 2016 the highest total sales experienced a significant decrease in revenue, which was around 38% to 135.3 million;
+
+- The age who made the order was dominated by the age of 33 years during 2015 to 2016.
 
 3. Product Overview
-Staple Envelope, Staples, and Easy-Staple Paper are the products that customers order the most. The company had to improve warehousing operations and stock control in New York, Los Angeles, and Philadelphia to ensure round-the-clock availability of this product.
-Although included in the most orders, Office Supplies (3665) is not the best product category of total sales. Technology (1518) generated the most sales and this can be attributed to the unit price of the product.
+- The office supplies category is a category that dominates in the number of orders and the value of promotion every year. But this category is the lowest in the store’s revenue value;
+
+- Staple Envelope was the product that customers order the most. The company had to improve warehousing operations and stock control to ensure round-the-clock availability of this product;
+
+- Although included in the most orders, Office Supplies was not the best product category of total sales. Technology generated the most sales and this can be attributed to the unit price of the product.
+
 
 Recommendations
 
-Explore marketing strategies that will help target and bring in new clients.
-The company should utilize customer and product information for marketing strategies that will help in retaining top customers.
-Find out what makes New York, Los Angeles, and Philadelphia their favorite cities for customers and apply the same strategy in other customer cities.
-The Office Supplies category seems to be the community’s favorite activity in the company’s sales area, which is indicated by orders and the technology category being the largest total sales. Companies must optimize sales by providing more products in both technology and office supplies categories and adapt their marketing campaigns to this niche market.
+1. Explore marketing strategies that will help target and bring in new clients.
+
+2. The company should utilize customer and product information for marketing strategies that will help in retaining top customers.
+
+3. Find out what makes New York, Los Angeles, and Philadelphia their favorite cities for customers and apply the same strategy in other customer cities.
+
+4. The Office Supplies category seems to be the community’s favorite activity in the company’s sales area, which is indicated by orders and the technology category being the largest total sales. Companies must optimize sales by providing more products in both technology and office supplies categories and adapt their marketing campaigns to this niche market.
 
 Thanks

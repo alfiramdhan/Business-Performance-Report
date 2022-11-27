@@ -53,3 +53,69 @@ ORDER BY 1
 		GROUP BY 1,2,3
 		ORDER BY 1;
 ```    
+
+4. Find the first order each year, each customer for best GMV(sales). If there is a tie, use the order with the lower order_id with or without use lower order_id, the result still same
+
+```sql
+WITH gmv_for_first_order AS(
+SELECT t1.customer_id, t1.sales, extract(year from first_date)as year
+FROM store_data t1
+INNER JOIN(
+		SELECT DISTINCT customer_id, min(order_date)as first_date
+		FROM (
+			SELECT customer_id, order_date
+			FROM store_data
+			ORDER BY order_id)a
+		GROUP BY 1
+)t2
+ON t1.customer_id = t2.customer_id
+AND t1.order_date = t2.first_date
+WHERE sales IS NOT NULL
+ORDER BY 2 desc
+),
+
+GMV_RANK_year AS(
+SELECT customer_id,
+		year,
+		sales,
+		RANK() OVER(PARTITION BY year ORDER BY sales DESC)as rank
+FROM gmv_for_first_order	
+group by 1,2,3
+order by 2, 3 desc
+)
+	SELECT year,
+			customer_id,
+			sales
+	FROM GMV_RANK_year
+	WHERE rank = 1
+```
+
+5. Find the number of customer who made first order in each city per year / the best city that makes the largest first order 
+
+```sql
+With first_order_city AS(
+SELECT extract(year from first_date)as year,city, count(customer_id)as total_customer
+FROM (
+	SELECT customer_id, min(order_date)as first_date
+	FROM store_data
+	GROUP BY 1)t1
+LEFT JOIN master_customer t2 USING (customer_id)
+GROUP BY 1,2
+ORDER BY 1, 3 desc
+)	,
+
+City_RANK_year AS(
+SELECT city,
+		year,
+		total_customer,
+		ROW_NUMBER() OVER(PARTITION BY year ORDER BY total_customer DESC)as rank
+FROM first_order_city	
+group by 1,2,3
+order by 2, 3 desc
+)
+	SELECT year,
+			city,
+			total_customer
+	FROM City_RANK_year
+	WHERE rank = 1
+```
